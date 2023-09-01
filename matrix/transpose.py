@@ -1,5 +1,3 @@
-import pandas as pd
-
 
 def transpose(matrix):
     """
@@ -13,7 +11,10 @@ def transpose(matrix):
     Returns:
         list[list[int]]: The transposed matrix.
     """
-    df = pd.DataFrame(matrix)
-    transposed_df = df.transpose()
-    transposed_matrix = transposed_df.values.tolist()
-    return transposed_matrix
+    len_cols = len(matrix[0])
+    len_rows = len(matrix)
+    transpose_matrix = [[0] * len_rows for _ in range(len_cols)]
+    for i, array in enumerate(range(len_rows)):
+        for j, value in enumerate(range(len_cols)):
+            transpose_matrix[j][i] = matrix[i][j]
+    return transpose_matrix
