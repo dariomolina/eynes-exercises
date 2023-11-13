@@ -12,7 +12,7 @@ class Circle:
         get_area(): Calculate the area of the circle.
         get_perimeter(): Calculate the perimeter of the circle
         __mul__(n): Multiply the circle's radius by a number.
-        __repr__(): Representation of the circle object
+        __repr__(): Representation of the circle object.
     """
 
     def __init__(self, radius):
